@@ -3,6 +3,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import classification_report
 from etl.preprocess import load_data, clean_data, feature_engineering
+import joblib
 
 df = load_data("data/sap_data.csv")
 df = clean_data(df)
@@ -21,3 +22,6 @@ model.fit(X_train, y_train)
 predictions = model.predict(X_test)
 
 print(classification_report(y_test, predictions))
+
+joblib.dump(model, "ml/model.pkl")
+print("Model saved successfully.")
