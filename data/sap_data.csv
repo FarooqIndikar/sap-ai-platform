@@ -1,0 +1,6 @@
+invoice_id,vendor,amount,status,due_days
+1,A,120000,unpaid,30
+2,B,50000,paid,0
+3,A,75000,unpaid,15
+4,C,200000,unpaid,45
+5,D,30000,paid,0
